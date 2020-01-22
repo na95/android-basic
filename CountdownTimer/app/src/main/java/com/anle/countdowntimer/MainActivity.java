@@ -2,6 +2,7 @@ package com.anle.countdowntimer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewTimer;
     private int actualSeconds;
     private CountDownTimer timer;
+    final private String text = "Set your time by the green ball above and" +
+            "\n press below button to start your countdown.";
 
     public void start(View view)
     {
@@ -31,15 +34,13 @@ public class MainActivity extends AppCompatActivity {
         int second = Integer.parseInt((time[1]));
         int miliseconds = min*60*1000 + second*1000;*/
         int miliseconds = actualSeconds*1000;
+        setNotificationText("");
 
         timer = new CountDownTimer(miliseconds, 1000)
         {
             @Override
             public void onTick(long millisUntilFinished) {
                 setTime((int) millisUntilFinished / 1000);
-                if (millisUntilFinished%4 == 0) setNotificationText("remaining.");
-                if (millisUntilFinished%4 == 1) setNotificationText("remaining..");
-                if (millisUntilFinished%4 == 2) setNotificationText("remaining...");
             }
 
             @Override
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 btnCancel.setVisibility(View.GONE);
                 setNotificationText("Finish!!!");
                 seekBarTime.setEnabled(true);
+                MediaPlayer.create(MainActivity.this, R.raw.done).start();
             }
 
         }.start();
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setVisibility(View.VISIBLE);
         btnCancel.setVisibility(View.GONE);
         setTime(actualSeconds);
-        setNotificationText("Press below button to start your countdown.");
+        setNotificationText(text);
         SeekBar seekBarTime = findViewById(R.id.seekBarTime);
         seekBarTime.setEnabled(true);
     }
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         SeekBar seekBarTime = findViewById(R.id.seekBarTime);
         textViewTimer = findViewById(R.id.textViewTimer);
         actualSeconds = 0;
-        setNotificationText("Press below button to start your countdown.");
+        setNotificationText(text);
 
         seekBarTime.setMax(300); //5 mins = 60x5 seconds
         seekBarTime.setProgress(0);
