@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         CarComponent component = DaggerCarComponent.create();
 
 
-        /** For Constructor Injecttion **/
-        //car = component.getCar();
+        /** For Constructor Injection **/
+        car = component.getCar();
 
         /** For Field Injection **/
-        component.inject(this);
+        //component.inject(this);
 
         car.drive();
     }
