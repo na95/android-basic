@@ -1,10 +1,9 @@
-# android-knowledge
+# 3rd-libs
 
-### Where I learn and practice about libraries
+To implement 3rd libraries to find out how they work
 
-### Current target
+## plan
 
-- [ ] Room
 - [ ] Rx Java / Rx Android
 - [ ] Dagger2
 - [ ] Retrofit
