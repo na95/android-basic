@@ -1,3 +1,3 @@
-# android-knowledge
+# basic-components
 
-My progress in learning and reviewing Android knowledge
+To implement basic components to figure out how they work
