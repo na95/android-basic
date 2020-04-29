@@ -14,5 +14,5 @@ To work with Retrofit we basically need the following three classes:
 
 ### Reference
 
-https://medium.com/mindorks/understand-how-does-retrofit-work-c9e264131f4a
-https://medium.com/@prakash_pun/retrofit-a-simple-android-tutorial-48437e4e5a23
+- https://medium.com/mindorks/understand-how-does-retrofit-work-c9e264131f4a
+- https://medium.com/@prakash_pun/retrofit-a-simple-android-tutorial-48437e4e5a23
