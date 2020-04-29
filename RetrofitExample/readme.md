@@ -12,6 +12,7 @@ To work with Retrofit we basically need the following three classes:
 2. An interface that defines the HTTP operations (GET, POST, etc.) needs to be performed
 3. Retrofit.Builder class: Instance which uses the interface defined above and the Builder API to allow defining the URL endpoint for the HTTP operations. It also takes the converters we provide to format the Response.
 
-Reference
+### Reference
+
 https://medium.com/mindorks/understand-how-does-retrofit-work-c9e264131f4a
 https://medium.com/@prakash_pun/retrofit-a-simple-android-tutorial-48437e4e5a23
