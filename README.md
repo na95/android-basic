@@ -6,4 +6,4 @@ To implement 3rd libraries to find out how they work
 
 - [ ] Rx Java / Rx Android
 - [ ] Dagger2
-- [ ] Retrofit
+- [x] Retrofit
